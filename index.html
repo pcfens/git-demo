@@ -46,27 +46,43 @@
         <aside class="notes">
             <p>A little about me, and why I'm here presenting on something programmers typically do.</p>
             <p>*nix Engineering</p>
-            <p>Why would a bunch of ops guys care about source control?</p>
             <hr />
-            <p>Swem - the ops and devs are the same people (devops)</p>
-            <p>In Swem we use git to manage and deploy 2 very large applications, both with 
-            upstream changes that we merge in to our heavy local customizations.</p>
+            <p>In Swem git is used to manage and deploy 2 very large applications, both with 
+            upstream changes that are merged in with heavy localization and customization.</p>
             <hr/>
             <p>Automation</p>
-            <p>We're good, lazy engineers.  We really like the DRY principle</p>
-
+            <p>I'm a typical engineer.  Lazy and don't like to repeat myself</p>
+            <p>I like to automate things - makes things easily repeatable</p>
+            <p>Makes the mantra - Automate all the things</p>
         </aside>
     </section>
     <section data-background-image="images/automate.jpg" data-background-size="contain">
         <aside class="notes">
-            <p>We with Swem's small staffing, and desire to do more, we had to automate.</p>
+            <p>Ops team needs some tools to automate things - to do this we use Puppet</p>
         </aside>
     </section>
     <section>
-        <img src="http://puppetlabs.com/wp-content/uploads/2010/12/PL_logo_vertical_RGB_lg.png">
+        <img src="http://puppetlabs.com/wp-content/uploads/2010/12/PL_logo_vertical_RGB_lg.png" />
         <aside class="notes">
             <p>We used a popular tool known as Puppet that stores infrastructure
             definitions as code - this lets us version/change control our infrastructure.</p>
+            <p>Infrastructure as code means we can deliver/replicate our infrastructure outside
+            the traditional datacenter.</p>
+        </aside>
+    </section>
+    <section>
+        <img src="images/openstack.png" />
+        <aside class="notes">
+            <p>Allows us to scale by building as machines as we need quickly and in an automated way &mdash;
+            a true cloud architecture (NIST Standard 800-145).</p>
+        </aside>
+    </section>
+    <section>
+        <img src="images/vagrant.png" />
+        <aside class="notes">
+            <p>Vagrant allows you to run parts of the infrastrucutre on your desk for development/testing</p>
+            <p>Makes development and testing much simpler &mdash; Allows devs to test like they're in the datacenter</p>
+            <p>Allows for better/more versatile testing of the infrastructure, and what it runs by everyone</p>
         </aside>
     </section>
     <section>
@@ -76,8 +92,8 @@
         <p>Automation</p>
         <h2 class="fragment">&lt;/Me&gt;</h2>
         <aside class="notes">
-            <p>We're doing that now on nearly all of our Linux systems in IT.</p>
-            <p>We could have used any SCM - but git won because it's a widely used, mature project - and it's only getting bigger.</p>
+            <p>All of our Linux systems are at least partially managed by Puppet.</p>
+            <p>Working on the other capabilities now to make everything easier.</p>
             <p>Enough about me and what I do - time to talk about git</p>
         </aside>
     </section>
@@ -143,6 +159,19 @@
         </aside>
     </section>
     <section>
+        <h2>Why git?</h2>
+        <p class="fragment">Fast</p>
+        <p class="fragment">Versatile</p>
+        <p class="fragment">Widely Used</p>
+        <aside class="notes">
+            <p>Fast - not a lot of overhead (computing or human) to make it go</p><hr />
+            <p>Versatile - can be used for lots of things - from configuration to code</p><hr />
+            <p>Widely Used by places like us &mdash; Universities, Ellucian &mdash; Google, Facebook, and other 
+            large companies - also GitHub</p>
+            <p>As of January 2013 GitHub had &gt;3M users and &gt; 5M repositories</p>
+        </aside>
+    </section>
+    <section>
         <h2>What git isn't</h2>
         <p class="fragment">Drop in replacement for any other SCM</p>
         <p class="fragment">Server for sharing code</p>
@@ -174,12 +203,12 @@ Initialized empty Git repository in /home/phil/projects/my_directory/.git
             <code data-trim>
 $ cd projects
 $ git clone http://github.com/pcfens/git-demo.git
-Cloning into 'web-demo'...
+Cloning into 'git-demo'...
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 0 (delta 0)
 Receiving objects: 100% (3/3), done.
-$ cd web-demo/    
+$ cd git-demo/    
             </code>
         </pre>
         <aside class="notes">
@@ -354,7 +383,7 @@ $ git commit -m "Made a local change"
         <h2>Additional Resources</h2>
         <p style="text-align: left; ">
         <ul>
-            <li><a href="http://try.github.com">http://try.github.com</a></li>
+            <li><a href="http://try.github.com/">http://try.github.com</a></li>
             <li><a href="http://git-scm.com/book">http://git-scm.com/book</a></li>
             <li><a href="http://whygitisbetterthanx.com">http://whygitisbetterthanx.com</a></li>
             <li><a href="https://illustrated-git.readthedocs.org">https://illustrated-git.readthedocs.org</a></li>
